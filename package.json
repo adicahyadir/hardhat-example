@@ -151,7 +151,7 @@
     "@nomicfoundation/hardhat-ledger": "^1.0.3",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.11",
     "@nomicfoundation/hardhat-verify": "^2.0.8",
-    "@nomicfoundation/ignition-core": "^0.15.4",
+    "@nomicfoundation/ignition-core": "^0.15.5",
     "@openzeppelin/contracts": "^5.0.2",
     "@tenderly/hardhat-tenderly": "^2.2.2",
     "@truffle/dashboard-hardhat-plugin": "^0.2.15",
