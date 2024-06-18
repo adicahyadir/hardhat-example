@@ -1,0 +1,15 @@
+node_modules
+lib
+cache
+cache_hardhat
+cache_hardhat-zk
+artifacts
+artifacts-zk
+typechain-types
+coverage
+deployments
+deployments-zk
+deployments_tenderly
+forge-artifacts
+bin
+out

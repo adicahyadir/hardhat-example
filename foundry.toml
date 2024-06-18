@@ -1,0 +1,26 @@
+# Defaults for all profiles.
+[profile.default]
+src = "contracts/src"                                     # Set the source directory.
+test = "contracts/test"                                   # Set the test directory.
+out = "forge-artifacts"                                   # Set the output directory for the artifacts.
+libs = ["contracts/lib"]                                  # Configure an array of library directories.
+cache = true                                              # Enable caching.
+cache_path = "cache"                                      # Set the path to the cache.
+force = false                                             # Do not ignore the cache.
+solc_version = "0.8.26"                                   # Set the Solidity compiler version.
+evm_version = "paris"                                     # Set the EVM target version.
+optimizer = true                                          # Enable the Solidity compiler optimiser.
+optimizer_runs = 999_999                                  # Configure the number of optimiser runs.
+via_ir = false                                            # Prevent the compilation pipeline from running through the Yul intermediate representation.
+verbosity = 3                                             # Set the verbosity level for the tests.
+ffi = false                                               # Enable the foreign function interface (ffi) cheatcode.
+fs_permissions = [{ access = "read-write", path = "./" }] # Configure read-write access to the project root.
+fuzz = { runs = 256, max_test_rejects = 65_536 }          # Configure the number of fuzz runs and maximum number of combined inputs that may be rejected for the tests.
+invariant = { runs = 256, depth = 15 }                    # Configure the number of runs and calls (executed in one run) for each invariant test group.
+
+# Default overrides for the CI runs.
+[profile.ci]
+force = true                                              # Perform always a clean build.
+verbosity = 4                                             # Increase the verbosity level for the tests.
+fuzz = { runs = 10_000, max_test_rejects = 150_000 }      # Increase the number of fuzz runs and maximum number of combined inputs that may be rejected for the tests.
+invariant = { runs = 375, depth = 500 }                   # Increase the number of runs (while preserving the default depth) for each invariant test group.
